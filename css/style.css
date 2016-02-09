@@ -3,7 +3,6 @@ body{
     font-size:16px;
     color:white;
     background:#849d8f;
-    
 }
 h1{
     font-size:35px;
@@ -16,23 +15,116 @@ h2{
     display:table;
     clear:both;
 }
+.logo{
+    padding:0;
+    margin:0;
+}
+main{
+    margin-top:523px;
+}
 .container{
-    width:1146px;
-    padding:0 27px;
+    
+    position:relative;
+    min-width:900px;
+    max-width:1200px;
+    padding:0 2.3%;
+    
+/*паддинг здесь на своём месте или в боди?*/
     margin:0 auto;
+    
+}
+/*SLIDERRRRRRRRRRRRR*/
+.bg-wrapper {
+  position: relative;
+}
+.slider {
+/*   overflow: hidden; */
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+}
+.slider-controls {
+  position: absolute;
+  top: 564px;
+  left: 38px;
+  z-index: 1000;
+}
+.slider-wrapper {
+  width: 100%;
+}
+.slide {
+/*   float: left; */
+  width: 200px;
+  position: absolute;
+  display: none;
+    left:83px;
+}
+input[type="radio"]{
+  display: none;
+}
+.slider-controls label {
+  width: 21px;
+  height: 21px;
+    margin-right:4px;
+  display: inline-block;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#btn-1:checked ~ .bg-wrapper .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .bg-wrapper .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .bg-wrapper .slider-controls label[for="btn-3"] {
+  background-color: #fff;
+}
+
+
+/* WARNING! Magic belllow this point! */
+
+/* slide changes */
+#btn-1:checked ~ .bg-wrapper .slider .slider-wrapper .slide:nth-child(1) {
+	display: block;
+}
+#btn-2:checked ~ .bg-wrapper .slider .slider-wrapper .slide:nth-child(2) {
+	display: block;
+}
+#btn-3:checked ~ .bg-wrapper .slider .slider-wrapper .slide:nth-child(3) {
+	display: block;
+}
+
+#btn-1:checked ~ .bg-wrapper {
+  background-color: transparent;
+}
+
+#btn-2:checked ~ .bg-wrapper {
+  background-color: #8996a6;
+}
+
+#btn-3:checked ~ .bg-wrapper {
+  background-color: #9d8b84;
+}
+/*SLIDERRRRRRRRRRRRR*/
+.container a{
+    color:white;
+}
+nav{
+    display:inline-block;
+    width:71%;
+    vertical-align:top;
+    margin-right:2.2%;
 }
 .main-navigation ul{
     padding:0;
+    margin-left:0;
     float:left;
     list-style:none;
+    font-weight:bold;
 }
 .main-navigation li{
     float:left;
-    margin-top:15px;
-    margin-right:30px;
-}
-.main-navigation a{
-    color:white;
+    margin-top:13px;
+    margin-right:27px;
 }
 .logo{
     margin-top:10px;
@@ -40,77 +132,146 @@ h2{
     float:left;
 }
 .user-block{
-    float:right;
-    width:267px;
+    display:inline-block;
+    width:22.2%;
     margin-top:23px;
+    position:relative;
+}
+.right-bottom{
+    position: absolute;
+    right:0;
 }
 .user-block a{
     text-decoration:none;
     font-size:14px;
+    background-color:rgba(255,255,255, .2);
 }
 .magnifier{
     width:33px;
     height:33px;
-    background:#a0b5a9;
     float:left;
     border-radius:50%;
     margin-right:9px;
+    position:relative;
 }
 .login{
     width:48px;
     height:26px;
     float:left;
-    background:#a0b5a9;
+    position:relative;
     padding-top:6px;
     padding-left:45px;
     border-radius:20px;
     margin-right:9px;
 }
+.entrance{
+    position:absolute;
+}
 .cart{
     width:72px;
     height:26px;
     float:left;
-    background:#a0b5a9;
+    position:relative;
     padding-top:6px;
     padding-left:45px;
     border-radius:20px;
+}
+.basket{
+    position:absolute;
 }
 .time{
     font-size:14px;
     float:right;
     margin-top:20px;
 }
-b{
+.right-bottom b{
     float:right;
     font-size:22px;
     margin-top:5px;
 }
-.promo-left{
-    width:560px;
-    background: url("../img/raspberry.png") no-repeat;
-    float:left;
-    height:229px;
-    margin-right:2.2%;
-    border-radius:20px;
+.breadcrumbs{
+    font-size:14px;
+    margin-top:25px;
+    margin-left:5px;
 }
-.promo-left h2, .promo-left p, .promo-right h2, .promo-right p{
+.breadcrumbs a{
+    margin-right:20px;
+}
+.title{
+    margin:0;
+    padding:0;
+}
+.title h1{
+    margin-top:2px;
+    margin-right:2px;
+}
+section h2{
+    font-size:35px;
+    margin:0;
+}
+.promo-left{
+    width:46.6%;
+    background: url("../img/raspberry.png") no-repeat;
+    display:inline-block;
+    min-height:229px;
+    box-sizing:border-box;
+    margin-right:2.2%;
     padding-left:20px;
+    padding-right:20px;
+    padding-top:15px;
+    border-radius:20px;
+    vertical-align:top;
+    font-weight:bold;
 }
 .promo-right{
-    width:560px;
+    width:46.6%;
     background: url("../img/chocolate.png") no-repeat;
-    float:right;
-    height:229px;
+    display:inline-block;
+    min-height:229px;
     border-radius:20px;
+    box-sizing:border-box;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:15px;
+    font-weight:bold;
+}
+.promo-right p, .promo-left p{
+    font-size:18px;
+}
+.promo-left .promo-btn{
+    width:165px;
+    height:42px;
+    border-radius:25px;
+    background:#e74c36;
+    float:right;
+    margin-top:42px;
+    text-align:center;
+}
+.promo-right .promo-btn{
+    width:190px;
+    height:42px;
+    border-radius:25px;
+    background:#e74c36;
+    float:right;
+    margin-top:42px;
+    text-align:center;
+}
+.promo-right a, .promo-left a{
+    display:block;
+    padding-top:8px;
+    text-decoration:none;
 }
 .content article{
-    float:left;
-    width:267px;
+    display:inline-block;
+    vertical-align:top;
+    font-size:0;
+    width:22.2%;
+/*Тут с шириной как быть? В имг заданы пикселы тут проценты.*/
     margin-top:40px;
     margin-bottom:35px;
 }
 .content article:not(:last-child){
-     margin-right:25px;
+     margin-right:2.2%;
 /*burn in hell bitch*/
 }
 .content a{
@@ -122,54 +283,68 @@ b{
 }
 .about-us{
     width:100%;
-    height:306px;
+    min-height:306px;
     background: url("../img/waffle.jpg") repeat;
     border-radius:20px;
     color:#323232;
     margin-bottom:40px;
-}
-.about-us h2{
+    box-sizing:border-box;
     padding-left:20px;
 }
 .facts{
     width:505px;
     float:left;
-    padding-left:55px;
-}
-.first, .third{
-    margin-left:20px;
+    margin-left:55px;
 }
 .blog{
     width:560px;
-    height:220px;
-    float:left;
+    min-height:220px;
+    display:inline-block;
+    vertical-align:top;
     background: url("../img/strawberry.png") no-repeat;
     color:#5a5a5a;
     margin-bottom:35px;
+    box-sizing: border-box;
+    padding:20px;
+}
+.blog a{
+    color:#353535;
+    font-size:24px;
 }
 .subscribe{
     width:560px;
     height:220px;
-    float:right;
+    display:inline-block;
     background: url("../img/mail.png") no-repeat;
     color:#5a5a5a;
-}
-.subscribe p{
-    padding-top:20px;
-    padding-left:27px;
-}
-.subscribe a{
-    font-size:24px;
-    padding-left:28px;
+    box-sizing: border-box;
+    padding:20px;
 }
 input[type="submit"]{
     width:131px;
-    height:47px;
+    height:45px;
     background:#ea5239;
+    color:white;
+    border-radius:25px;
+    border:none;
+}
+input[type="email"]{
+    width:368px;
+    height:44px;
+    float:left;
+    border-radius:7px;
+}
+::-webkit-input-placeholder {padding-left:10px;}
+::-moz-placeholder  {padding-left:10px;}
+:-ms-input-placeholder{padding-left:10px;}
+/*Плэйсхолдер в мозилле ну никак не хочет стилизоваться. Почему? Я что, так много прошу?(*/
+.submit-group{
+    margin-top:37px;
 }
 .map-info{
     height:429px;
     width:100%;
+    margin:0 -2.3%;
     background: url("../img/map.jpg") no-repeat;
 }
 .info{
@@ -177,47 +352,350 @@ input[type="submit"]{
     color:black;
     width:302px;
     height:305px;
+    box-sizing:border-box;
     border-radius:20px;
+    padding-left:25px;
+    padding-top:30px;
+    text-align:left;
+    float:right;
+    margin-top:65px;
 }
+.info b{
+    font-size: 18px;
+}
+.info span, .info b{
+    float:left;
+}
+.info-btn{
+    float:left;
+    width:254px;
+    height:42px;
+    color:white;
+    background:#ec583c;
+    border-radius:20px;
+    margin-top:30px;
+    text-align:center;
+}
+.info-btn a{
+    display:block;
+    padding-top:8px;
+}
+/*СТРАНИЦА ДВА*/
+
+.sort-filter, .fat-filter, .price-filter, .fill-filter, .btn-filter, .range-filter{
+    display:inline-block;
+    vertical-align:top;
+    
+}
+.main-filter{
+    font-weight:bold;
+    font-size:14px;
+}
+.sort-filter{
+    margin:0;
+    padding:0;
+}
+sort-filter p{
+    margin:1px;
+    padding:0;
+}
+.range-filter{
+    width:219px;
+}
+.range-filter .range-controls{
+    position:relative;
+    height:50px;
+    border-radius:25px;
+    background:#aabab0;
+    overflow:hidden;
+}
+.scale{
+    width:188px;
+    margin-top:22px;
+  margin-left:15px;
+    height:4px;
+    background:#d7dcde;
+}
+.bar{
+  width:107px;
+  margin-left:50px;
+    height:4px;
+    background:white;
+}
+.toggle{
+    position:absolute;
+    top:15px;
+    left:30px;
+    width:4px;
+    height:4px;
+    border:8px solid white;
+    background:#ababab;
+    cursor:pointer;
+    border-radius:50%;
+}
+.range-filter:first-child .range-controls .min-toggle {
+    left:55px;
+}
+.range-filter:first-child .range-controls .max-toggle{
+    left:165px;
+}
+.fat-lable{
+    width:415px;
+    height:37px;
+    background:rgba(255,255,255, .2)
+    border-radius:25px;
+}
+.fill{
+    width:703px;
+    height:37px;
+    background:rgba(255,255,255, .2);
+    border-radius:25px;
+    
+}
+select{
+    background:rgba(255,255,255, .2)
+    width:194px;
+    height:37px;
+    border-radius:20px;
+    padding:5px;
+}
+.main-pages{
+    position:relative;
+    background:red;
+}
+
 /*footer*/
 
+
 footer{
+    box-sizing:border-box;
     color:white;
+    padding-top:35px;
 }
 footer a{
     color:white;
 }
 .footer-social{
+    display:inline-block;
     width:293px;
     margin-right:105px;
     margin-left:25px;
-    float:left;
 }
 .footer-social a{
-    float:left;
+    display:inline-block;
     border-radius:50%;
-    width:40px;
-    height:40px;
-    border:3px solid #c2cec7;
+    width:39px;
+    height:39px;
+    border:
     margin-right:10px;
+    font-size:13px;
+    position:relative;
+    
 }
 .footer-info{
-    float:left;
+    display:inline-block;
     width:380px;
     padding-bottom:30px;
 }
 .info-left{
     width:160px;
-    float:left;
+    display:inline-block;
     font-size:13px;
 }
 .info-right{
-    float:left;
+    display:inline-block;
     width:180px;
     font-size:13px;
 }
 .footer-copyright{
-    float:right;
+    display:inline-block;
     width:194px;
     font-size:12px;
 }
+.logo-academy{
+    position:relative;
+    width: 108px;
+    height: 38px;
+}
+/*Sprite*/
+.sprite {
+    background-image: url(../img/spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-basket {
+    width: 21px;
+    height: 20px;
+    background-position: -10px -10px;
+}
+
+.sprite-entrance {
+    width: 21px;
+    height: 19px;
+    background-position: -10px -50px;
+}
+
+.sprite-fb {
+    width: 38px;
+    height: 38px;
+    background-position: -10px -89px;
+}
+
+.sprite-heart {
+    width: 15px;
+    height: 13px;
+    background-position: -10px -147px;
+}
+
+.sprite-hit {
+    width: 61px;
+    height: 61px;
+    background-position: -10px -180px;
+}
+
+.sprite-insta {
+    width: 38px;
+    height: 38px;
+    background-position: -10px -261px;
+}
+
+.sprite-left {
+    width: 9px;
+    height: 14px;
+    background-position: -10px -319px;
+}
+
+.sprite-logo-academy {
+    width: 108px;
+    height: 38px;
+    background-position: -10px -353px;
+}
+
+.sprite-magnifier {
+    width: 17px;
+    height: 17px;
+    background-position: -10px -411px;
+}
+
+.sprite-right {
+    width: 9px;
+    height: 14px;
+    background-position: -10px -448px;
+}
+
+.sprite-tw {
+    width: 39px;
+    height: 38px;
+    background-position: -10px -482px;
+}
+
+.sprite-vk {
+    width: 38px;
+    height: 38px;
+    background-position: -10px -540px;
+}
+
+.sprite-waffle-cow {
+    width: 48px;
+    height: 49px;
+    background-position: -10px -598px;
+}
+
+.sprite-waffle-ice-cream {
+    width: 49px;
+    height: 49px;
+    background-position: -10px -667px;
+}
+
+.sprite-waffle-leaf {
+    width: 49px;
+    height: 49px;
+    background-position: -10px -736px;
+}
+
+.sprite-waffle-thermometer {
+    width: 48px;
+    height: 49px;
+    background-position: -10px -805px;
+}
+
+.social-btn::before, .logo-academy::before, .magnifier::before, .login::before, .cart::before, .left::before, .right::before{
+    content:'';
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../img/spritesheet.png");
+    background-repeat:no-repeat;
+}
+.left::before{
+    left:-5px;
+}
+.right::before{
+    right:1000px;
+}
+.left::before{
+    width: 9px;
+    height: 14px;
+    background-position: -10px -319px;
+}
+.right::before{
+    width: 9px;
+    height: 14px;
+    background-position: -10px -448px;
+}
+.login::before, .cart::before{
+    left:25%;
+}
+.login::before{
+    width: 21px;
+    height: 19px;
+    background-position: -10px -50px;
+}
+.cart::before{
+    width: 21px;
+    height: 20px;
+    background-position: -10px -10px;
+}
+.magnifier::before{
+    width: 17px;
+    height: 17px;
+    background-position: -10px -411px;
+}
+.social-btn-fb::before{
+    width: 38px;
+    height: 38px;
+    background-position: -10px -89px;
+}
+.social-btn-vk::before{
+    width: 38px;
+    height: 38px;
+    background-position: -10px -540px;
+}
+.social-btn-inst::before{
+    width: 38px;
+    height: 38px;
+    background-position: -10px -261px;
+}
+.social-btn-tw::before{
+    width: 39px;
+    height: 38px;
+    background-position: -10px -482px;
+}
+.logo-academy::before{
+    width: 108px;
+    height: 38px;
+    background-position: -10px -353px;
+}
+/*Glyphter*/
+.about-us .icon{
+    font-family: 'my font';
+    font-size:11.81px;
+    color:white;
+}
+@font-face {
+    font-family: 'my font';
+    src: url('../fonts/my-font.woff') format('woff');
+}
+    

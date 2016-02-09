@@ -2,6 +2,7 @@
   <html lang="ru">
     <head>
       <meta charset="utf-8">
+      <link href="css/normalize.css" rel="stylesheet">
       <link href="css/style.css" rel="stylesheet">
       <link href='https://fonts.googleapis.com/css?family=Roboto:500&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
       <title>Gllacy</title>
@@ -10,30 +11,32 @@
       <header class="main-header">
         <div class="container">
           <nav class="main-navigation">
+            <img class="logo" src="img/gllacyshop-logo.svg" width="153.094" height="63.25" alt="Gllacyshop">
             <ul>
-              <li><a href="index.html"><img src="img/gllacyshop-logo.svg" width="200" height="80" alt="Gllacyshop"></a></li>
-              <li><span>Каталог</span></li>
+              <li><a href="catalog.html">Каталог</a></li>
               <li><a href="#">Доставка и оплата</a></li>
               <li><a href="#">О компании</a></li>
             </ul>
-            <div class="header-right-top">
-              <input type="search">
-              <a href="#"><img src="#" width="200" height="80" alt="Кнопка входа">Вход</a>
-              <a href="#"><img src="#" width="200" height="80" alt="Корзина">Пусто</a>
+            </nav>
+            <div class="user-block">
+                <div class="right-top clearfix">
+                    <a class="magnifier" href="#"></a>
+                    <a class="login" href="#">Вход</a>
+                    <a class="cart" href="#">Пусто</a>
+                </div>
+                <div class="right-bottom">
+                    <span class="time">С 10 до 20, ежедневно</span><br>
+                  <b>8 812 450-25-25</b>
+                </div>    
             </div>
-            <div class="header-right-bottom">
-              <p>С 10 до 20, ежедневно<br>
-              <b>8 812 450-25-25</b></p>
-            </div>
-          </nav>
-         </div> 
-        </header> 
-      <main>
+       </div>
+        </header>  
+      <main style="margin-top:0;">
         <div class="container">
           <div class="breadcrumbs">
             <a href="#">Главная</a>
             <a href="#">Каталог</a>
-            <a href="#">Сливочное</a>
+            <span>Сливочное</span>
           </div>
           <div class="title">
             <h1>Сливочное мороженое</h1>
@@ -42,40 +45,28 @@
             <div class="sort-filter">
               <p>Сортировка:</p>
               <select>
-                <option>По популярности
-                </option>
+                <option>По популярности</option>
               </select>
             </div>
-            <div class="price-filter">
-              <p class="price-title">Цена 100 руб. - 500 руб.</p>
-              <div class="range-controls">
-                <div class="scale">
-                  <div class="bar">
-                  </div>
-                </div>
-                <div class="toggle min-toggle">
-                </div>
-                <div class="toggle max-toggle">
-                </div>
-              </div>
+            <div class="range-filter">
+            <div class="range-controls">
+                <div class="scale"><div class="bar"></div></div>
+                <div class="toggle min-toggle"></div>
+                <div class="toggle max-toggle"></div>
+            </div>
             </div>
             <div class="fat-filter">
-              <p class="fat-title">Жирность</p>
-              <label>
-                <input type="radio" name="fat">0%
-              </label>
-              <label>
-                <input type="radio" name="fat" checked>до 10%
-              </label>
-              <label>
-                <input type="radio" name="fat">до 30%
-              </label>
-              <label>
-                <input type="radio" name="fat">выше 30%
-              </label>
+              <p class="fat-title">Жирность:</p>
+              <div class="fat-lable">
+              <label><input type="radio" name="fat">0%</label>
+              <label><input type="radio" name="fat" checked>до 10%</label>
+              <label><input type="radio" name="fat">до 30%</label>
+              <label><input type="radio" name="fat">выше 30%</label>
+              </div>
             </div>
             <div class="fill-filter">
-              <p class="fill-title">Наполнители:</p>
+              <p>Наполнители:</p>
+              <div class="fill">
               <label>
                 <input type="checkbox" checked>шоколадные
               </label>
@@ -98,92 +89,93 @@
           </div> 
           <div class="content">
             <article>
-              <div class="img-good"><img src="img/ice-cream-1.png" width="200" height="80" alt="сливочное с апельсиновым джемом">
+              <div class="img-good"><img src="img/ice-cream-1.png" width="267" height="267" alt="сливочное с апельсиновым джемом">
                </div> 
               <a href="#">Сливочное с апельсиновым<br>
               джемом и цитрусовой стружкой</a>
             </article>
             <article>
-              <div class="img-good"><img src="img/ice-cream-2.png" width="200" height="80" alt="сливочно-клубничное">
+              <div class="img-good"><img src="img/ice-cream-2.png" width="267" height="267" alt="сливочно-клубничное">
                </div> 
               <a href="#">Сливочно-клубничное с<br>
               присыпкой из белого шоколада</a>
             </article>
             <article>
-              <div class="img-good"><img src="img/ice-cream-3.png" width="200" height="80" alt="сливочно-кофейное">
-               </div> 
+              <div class="img-good"><img src="img/ice-cream-3.png" width="267" height="267">
               <a href="#">Сливочно-кофейное с кусочками<br>
               шоколада</a>
+                </div>
             </article>
             <article>
-              <div class="img-good"><img src="img/ice-cream-4.png" width="200" height="80" alt="сливочное крем-брюле">
+              <div class="img-good"><img src="img/ice-cream-4.png" width="267" height="267" alt="сливочное крем-брюле">
                </div> 
               <a href="#">Сливочное крем-брюле с<br>
               карамельной подливкой</a>
             </article>
             <article>
-              <div class="img-good"><img src="img/ice-cream-5.png" width="200" height="80" alt="Сливочное с брусничным джемом">
+              <div class="img-good"><img src="img/ice-cream-5.png" width="267" height="267" alt="Сливочное с брусничным джемом">
               </div>  
               <a href="#">Сливочное с брусничным<br>
               джемом</a>
             </article>
             <article>
-              <div class="img-good"><img src="img/ice-cream-6.png" width="200" height="80" alt="Сливочно-черничное с цельными ягодами черники">
+              <div class="img-good"><img src="img/ice-cream-6.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
               </div> 
               <a href="#">Сливочно-черничное с цельными
               <br>ягодами черники</a>
             </article>
             <article>
-              <div class="img-good"><img src="img/ice-cream-7.png" width="200" height="80" alt="Сливочно-лимонное с карамельной присыпкой">
+              <div class="img-good"><img src="img/ice-cream-7.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
                </div> 
               <a href="#">Сливочно-лимонное с<br> карамельной присыпкой</a>
             </article>
             <article>
-              <div class="img-good"><img src="img/ice-cream-8.png" width="200" height="80" alt="Сливочное с шоколадной стружкой">
+              <div class="img-good"><img src="img/ice-cream-8.png" width="267" height="267" alt="Сливочное с шоколадной стружкой">
                </div> 
               <a href="#">Сливочное с шоколадной<br>
               стружкой</a>
             </article>
             <article>
-              <div class="img-good"><img src="img/ice-cream-9.png" width="200" height="80" alt="Сливочно-ванильное с кусочками шоколада">
+              <div class="img-good"><img src="img/ice-cream-9.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
                </div> 
               <a href="#">Сливочно-ванильное<br>
               с кусочками шоколада</a>
             </article>
             <article>
-              <div class="img-good"><img src="img/ice-cream-10.png" width="200" height="80" alt="Сливочное с ментоловым сиропом">
+              <div class="img-good"><img src="img/ice-cream-10.png" width="267" height="267" alt="Сливочное с ментоловым сиропом">
                </div> 
               <a href="#">Сливочное с ментоловым<br>
               сиропом</a>
             </article>
             <article>
-              <div class="img-good"><img src="img/ice-cream-11.png" width="200" height="80" alt="Сливочное с кусочками черного шоколада">
+              <div class="img-good"><img src="img/ice-cream-11.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
                </div> 
               <a href="#">Сливочное с кусочками черного
               <br>шоколада</a>
             </article>
             <article>
-              <div class="img-good"><img src="img/ice-cream-12.png" width="200" height="80" alt="Сливочное с мятным сиропом">
+              <div class="img-good"><img src="img/ice-cream-12.png" width="267" height="267" alt="Сливочное с мятным сиропом">
                </div> 
               <a href="#">Сливочное с мятным сиропом</a>
             </article>
           </div>
-          <div class="main-pages">
-            <a href="#"><img src="#" width="200" height="80" alt="Стрека влево"></a>
+          <div class="main-pages clearfix">
+            <span class="left"></span>
             <a href="#">1</a>
             <a href="#">2</a>
             <a href="#">3</a>
             <a href="#">4</a>
             <a href="#">5</a>
-            <a href="#"><img src="#" width="200" height="80" alt="Стрека вправо"></a>
+            <a class="right" href="#"></a>
           </div>
           <div class="line-through">
           <hr>
           </div>
+        </div>
         </div> 
       </main>
-      <footer class="main-footer">
-        <div class="container">
+       <footer class="main-footer">
+        <div class="container clearfix">
           <section class="footer-social">
             <a class="social-btn social-btn-tw" href="#"></a>
             <a class="social-btn social-btn-inst" href="#"></a>
@@ -191,19 +183,18 @@
             <a class="social-btn social-btn-vk" href="#"></a>
           </section>
           <section class="footer-info">
-            <div class="footer-info-left">
-              <a href="#">Для поставщиков</a><br>
+            <div class="info-left">
+                <a href="#"><b>Для поставщиков</b></a><br>
               <a href="#">О производстве</a>
             </div>
-            <div class="footer-info-right">
+            <div class="info-right">
               <a href="#">Наши документы</a><br>
               <a href="#">Экологические стандарты</a>
             </div>
           </section>
           <section class="footer-copyright">
-              <div class="copyright"><a href="#"><img src="#" width="200" height="80" alt="HTMLACADEMY"></a>
-             </div> 
-              <p>Сделано в <a href="#">HTML Academy.RU</a> © 2016</p>
+              <a class="logo-academy" href="#"></a>
+              <p>Сделано в <a href="#">HTML Academy</a> © 2016</p>
           </section>
         </div>
       </footer>
