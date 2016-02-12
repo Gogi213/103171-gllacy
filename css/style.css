@@ -15,6 +15,7 @@ h2{
     display:table;
     clear:both;
 }
+<<<<<<< HEAD
 
 
 /*SLIDERRRR*/
@@ -128,14 +129,112 @@ main{
     margin:0 auto;
     outline:1px solid green;
 }
+=======
+.logo{
+    padding:0;
+    margin:0;
+}
+main{
+    margin-top:523px;
+}
+.container{
+    
+    position:relative;
+    min-width:900px;
+    max-width:1200px;
+    padding:0 2.3%;
+    
+/*паддинг здесь на своём месте или в боди?*/
+    margin:0 auto;
+    
+}
+/*SLIDERRRRRRRRRRRRR*/
+.bg-wrapper {
+  position: relative;
+}
+.slider {
+/*   overflow: hidden; */
+  text-align: center;
+  width: 200px;
+  margin: 0 auto;
+}
+.slider-controls {
+  position: absolute;
+  top: 564px;
+  left: 38px;
+  z-index: 1000;
+}
+.slider-wrapper {
+  width: 100%;
+}
+.slide {
+/*   float: left; */
+  width: 200px;
+  position: absolute;
+  display: none;
+    left:83px;
+}
+input[type="radio"]{
+  display: none;
+}
+.slider-controls label {
+  width: 21px;
+  height: 21px;
+    margin-right:4px;
+  display: inline-block;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+#btn-1:checked ~ .bg-wrapper .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .bg-wrapper .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .bg-wrapper .slider-controls label[for="btn-3"] {
+  background-color: #fff;
+}
+
+
+/* WARNING! Magic belllow this point! */
+
+/* slide changes */
+#btn-1:checked ~ .bg-wrapper .slider .slider-wrapper .slide:nth-child(1) {
+	display: block;
+}
+#btn-2:checked ~ .bg-wrapper .slider .slider-wrapper .slide:nth-child(2) {
+	display: block;
+}
+#btn-3:checked ~ .bg-wrapper .slider .slider-wrapper .slide:nth-child(3) {
+	display: block;
+}
+
+#btn-1:checked ~ .bg-wrapper {
+  background-color: transparent;
+}
+
+#btn-2:checked ~ .bg-wrapper {
+  background-color: #8996a6;
+}
+
+#btn-3:checked ~ .bg-wrapper {
+  background-color: #9d8b84;
+}
+/*SLIDERRRRRRRRRRRRR*/
+>>>>>>> origin/master
 .container a{
     color:white;
 }
 nav{
     display:inline-block;
+<<<<<<< HEAD
     width:515px;
     vertical-align:top;
     outline:1px solid red;
+=======
+    width:71%;
+    vertical-align:top;
+    margin-right:2.2%;
+>>>>>>> origin/master
 }
 .main-navigation ul{
     padding:0;
@@ -147,7 +246,11 @@ nav{
 .main-navigation li{
     float:left;
     margin-top:13px;
+<<<<<<< HEAD
     margin-right:28px;
+=======
+    margin-right:27px;
+>>>>>>> origin/master
 }
 .logo{
     margin-top:10px;
@@ -157,6 +260,7 @@ nav{
 }
 .user-block{
     display:inline-block;
+<<<<<<< HEAD
     margin-top:23px;
     position:relative;
     margin-left:16.9%;
@@ -169,6 +273,15 @@ nav{
 .right-bottom span{
     font-size:14px;
     font-weight:bold;
+=======
+    width:22.2%;
+    margin-top:23px;
+    position:relative;
+}
+.right-bottom{
+    position: absolute;
+    right:0;
+>>>>>>> origin/master
 }
 .user-block a{
     text-decoration:none;
@@ -180,7 +293,11 @@ nav{
     height:33px;
     float:left;
     border-radius:50%;
+<<<<<<< HEAD
     margin-right:10px;
+=======
+    margin-right:9px;
+>>>>>>> origin/master
     position:relative;
 }
 .login{
@@ -188,10 +305,17 @@ nav{
     height:25px;
     float:left;
     position:relative;
+<<<<<<< HEAD
     padding-top:7px;
+=======
+    padding-top:6px;
+>>>>>>> origin/master
     padding-left:45px;
     border-radius:20px;
     margin-right:10px;
+}
+.entrance{
+    position:absolute;
 }
 .entrance{
     position:absolute;
@@ -201,7 +325,11 @@ nav{
     height:25px;
     float:left;
     position:relative;
+<<<<<<< HEAD
     padding-top:7px;
+=======
+    padding-top:6px;
+>>>>>>> origin/master
     padding-left:45px;
     border-radius:20px;
 }
@@ -238,7 +366,28 @@ section h2{
     font-size:35px;
     margin:0;
 }
+.breadcrumbs{
+    font-size:14px;
+    margin-top:25px;
+    margin-left:5px;
+}
+.breadcrumbs a{
+    margin-right:20px;
+}
+.title{
+    margin:0;
+    padding:0;
+}
+.title h1{
+    margin-top:2px;
+    margin-right:2px;
+}
+section h2{
+    font-size:35px;
+    margin:0;
+}
 .promo-left{
+<<<<<<< HEAD
     background: url("../img/raspberry.png") no-repeat;
     min-height:229px;
     padding-left:20px;
@@ -253,10 +402,33 @@ section h2{
 .promo-right{
     background: url("../img/chocolate.png") no-repeat;
     min-height:229px;
+=======
+    width:46.6%;
+    background: url("../img/raspberry.png") no-repeat;
+    display:inline-block;
+    min-height:229px;
+    box-sizing:border-box;
+    margin-right:2.2%;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:15px;
+    border-radius:20px;
+    vertical-align:top;
+    font-weight:bold;
+}
+.promo-right{
+    width:46.6%;
+    background: url("../img/chocolate.png") no-repeat;
+    display:inline-block;
+    min-height:229px;
+    border-radius:20px;
+    box-sizing:border-box;
+>>>>>>> origin/master
     padding-left:20px;
     padding-right:20px;
     padding-top:15px;
     font-weight:bold;
+<<<<<<< HEAD
     position:relative;
     background-size:cover;
     box-sizing:border-box
@@ -319,10 +491,46 @@ section h2{
     vertical-align:top;
     font-size:0;
     width:267px;
+=======
+}
+.promo-right p, .promo-left p{
+    font-size:18px;
+}
+.promo-left .promo-btn{
+    width:165px;
+    height:42px;
+    border-radius:25px;
+    background:#e74c36;
+    float:right;
+    margin-top:42px;
+    text-align:center;
+}
+.promo-right .promo-btn{
+    width:190px;
+    height:42px;
+    border-radius:25px;
+    background:#e74c36;
+    float:right;
+    margin-top:42px;
+    text-align:center;
+}
+.promo-right a, .promo-left a{
+    display:block;
+    padding-top:8px;
+    text-decoration:none;
+}
+.content article{
+    display:inline-block;
+    vertical-align:top;
+    font-size:0;
+    width:22.2%;
+/*Тут с шириной как быть? В имг заданы пикселы тут проценты.*/
+>>>>>>> origin/master
     margin-top:40px;
     margin-bottom:35px;
     z-index:1;
 }
+<<<<<<< HEAD
 .title-price{
     font-size:45px;
     font-weight:bold;
@@ -330,6 +538,11 @@ section h2{
     bottom:0;
     left:0;
     z-index:100;
+=======
+.content article:not(:last-child){
+     margin-right:2.2%;
+/*burn in hell bitch*/
+>>>>>>> origin/master
 }
 .icon{
     font-family: 'my font';
@@ -347,11 +560,16 @@ section h2{
     margin-top:15px;
 }
 .about-us{
+<<<<<<< HEAD
     width:99.5%;
+=======
+    width:100%;
+>>>>>>> origin/master
     min-height:306px;
     background: url("../img/waffle.jpg") repeat;
     border-radius:18px;
     color:#323232;
+<<<<<<< HEAD
     margin-bottom:41px;
     box-sizing:border-box;
     padding-left:20px;
@@ -360,10 +578,16 @@ section h2{
 }
 .about-us h2{
     margin-bottom:9px;
+=======
+    margin-bottom:40px;
+    box-sizing:border-box;
+    padding-left:20px;
+>>>>>>> origin/master
 }
 .facts{
     width:504px;
     float:left;
+<<<<<<< HEAD
     margin-left:58px;
     position:relative;
     margin-bottom: -2px;
@@ -380,12 +604,27 @@ section h2{
 }
 .blog span{
     margin:0;
+=======
+    margin-left:55px;
+}
+.blog{
+    width:560px;
+    min-height:220px;
+    display:inline-block;
+    vertical-align:top;
+    background: url("../img/strawberry.png") no-repeat;
+    color:#5a5a5a;
+    margin-bottom:35px;
+    box-sizing: border-box;
+    padding:20px;
+>>>>>>> origin/master
 }
 .blog a{
     color:#353535;
     font-size:24px;
 }
 .subscribe{
+<<<<<<< HEAD
     min-height:220px;
     background: url("../img/mail.png") no-repeat;
     color:#5a5a5a;
@@ -399,23 +638,52 @@ input[type="submit"]{
     border:none;
     color:white;
     font-size:17px;
+=======
+    width:560px;
+    height:220px;
+    display:inline-block;
+    background: url("../img/mail.png") no-repeat;
+    color:#5a5a5a;
+    box-sizing: border-box;
+    padding:20px;
+}
+input[type="submit"]{
+    width:131px;
+    height:45px;
+    background:#ea5239;
+    color:white;
+    border-radius:25px;
+    border:none;
+>>>>>>> origin/master
 }
 input[type="email"]{
     width:368px;
     height:44px;
     float:left;
     border-radius:7px;
+<<<<<<< HEAD
     box-sizing:border-box;
     padding:0 10px;
     margin-right:10px;
 }
+=======
+}
+::-webkit-input-placeholder {padding-left:10px;}
+::-moz-placeholder  {padding-left:10px;}
+:-ms-input-placeholder{padding-left:10px;}
+/*Плэйсхолдер в мозилле ну никак не хочет стилизоваться. Почему? Я что, так много прошу?(*/
+>>>>>>> origin/master
 .submit-group{
     margin-top:37px;
 }
 .map-info{
     height:429px;
     width:100%;
+<<<<<<< HEAD
     margin:0 auto;
+=======
+    margin:0 -2.3%;
+>>>>>>> origin/master
     background: url("../img/map.jpg") no-repeat;
     background-size:cover;
 }
@@ -426,6 +694,7 @@ input[type="email"]{
     width:302px;
     height:305px;
     box-sizing:border-box;
+<<<<<<< HEAD
     border-radius:20px;
     padding-left:25px;
     padding-top:30px;
@@ -445,20 +714,58 @@ input[type="email"]{
     margin-top:65px;
     padding:10px 30px 12px 30px;
     font-size:17px;
+=======
+    border-radius:20px;
+    padding-left:25px;
+    padding-top:30px;
+    text-align:left;
+    float:right;
+    margin-top:65px;
+}
+.info b{
+    font-size: 18px;
+}
+.info span, .info b{
+    float:left;
+}
+.info-btn{
+    float:left;
+    width:254px;
+    height:42px;
+    color:white;
+    background:#ec583c;
+    border-radius:20px;
+    margin-top:30px;
+    text-align:center;
+}
+.info-btn a{
+    display:block;
+    padding-top:8px;
+>>>>>>> origin/master
 }
 /*СТРАНИЦА ДВА*/
 
 .sort-filter, .fat-filter, .price-filter, .fill-filter, .btn-filter, .range-filter{
     display:inline-block;
     vertical-align:top;
+<<<<<<< HEAD
 }
 .main-filter{
+=======
+    
+}
+.main-filter{
+    font-weight:bold;
+>>>>>>> origin/master
     font-size:14px;
 }
 .sort-filter{
     margin:0;
     padding:0;
+<<<<<<< HEAD
     width:150px;
+=======
+>>>>>>> origin/master
 }
 sort-filter p{
     margin:1px;
@@ -467,6 +774,7 @@ sort-filter p{
 .range-filter{
     width:219px;
 }
+<<<<<<< HEAD
 
 .fat-lable{
     padding: 10px 10px 10px 10px;
@@ -608,8 +916,72 @@ select{
 .btn-filter a{
     text-decoration:none;
 }
+=======
+.range-filter .range-controls{
+    position:relative;
+    height:50px;
+    border-radius:25px;
+    background:#aabab0;
+    overflow:hidden;
+}
+.scale{
+    width:188px;
+    margin-top:22px;
+  margin-left:15px;
+    height:4px;
+    background:#d7dcde;
+}
+.bar{
+  width:107px;
+  margin-left:50px;
+    height:4px;
+    background:white;
+}
+.toggle{
+    position:absolute;
+    top:15px;
+    left:30px;
+    width:4px;
+    height:4px;
+    border:8px solid white;
+    background:#ababab;
+    cursor:pointer;
+    border-radius:50%;
+}
+.range-filter:first-child .range-controls .min-toggle {
+    left:55px;
+}
+.range-filter:first-child .range-controls .max-toggle{
+    left:165px;
+}
+.fat-lable{
+    width:415px;
+    height:37px;
+    background:rgba(255,255,255, .2)
+    border-radius:25px;
+}
+.fill{
+    width:703px;
+    height:37px;
+    background:rgba(255,255,255, .2);
+    border-radius:25px;
+    
+}
+select{
+    background:rgba(255,255,255, .2)
+    width:194px;
+    height:37px;
+    border-radius:20px;
+    padding:5px;
+}
+.main-pages{
+    position:relative;
+    background:red;
+}
+>>>>>>> origin/master
 
 /*footer*/
+
 
 footer{
     box-sizing:border-box;
@@ -623,6 +995,7 @@ footer a{
     display:inline-block;
     width:293px;
     margin-right:105px;
+<<<<<<< HEAD
 }
 .footer-social a{
     display:inline-block;
@@ -635,18 +1008,44 @@ footer a{
 .footer-info{
     display:inline-block;
     width:315px;
+=======
+    margin-left:25px;
+}
+.footer-social a{
+    display:inline-block;
+    border-radius:50%;
+    width:39px;
+    height:39px;
+    border:
+    margin-right:10px;
+    font-size:13px;
+    position:relative;
+    
+}
+.footer-info{
+    display:inline-block;
+    width:380px;
+>>>>>>> origin/master
     padding-bottom:30px;
     vertical-align:top;
     margin-right:230px;
 }
 .info-left{
+<<<<<<< HEAD
     width:140px;
+=======
+    width:160px;
+>>>>>>> origin/master
     display:inline-block;
     font-size:13px;
 }
 .info-right{
     display:inline-block;
+<<<<<<< HEAD
     width:170px;
+=======
+    width:180px;
+>>>>>>> origin/master
     font-size:13px;
 }
 .footer-copyright{
@@ -672,6 +1071,7 @@ footer a{
     background-position: -10px -10px;
 }
 
+<<<<<<< HEAD
 .sprite-cart {
     width: 21px;
     height: 20px;
@@ -688,17 +1088,34 @@ footer a{
     width: 32px;
     height: 32px;
     background-position: -10px -129px;
+=======
+.sprite-entrance {
+    width: 21px;
+    height: 19px;
+    background-position: -10px -50px;
+}
+
+.sprite-fb {
+    width: 38px;
+    height: 38px;
+    background-position: -10px -89px;
+>>>>>>> origin/master
 }
 
 .sprite-heart {
     width: 15px;
     height: 13px;
+<<<<<<< HEAD
     background-position: -10px -181px;
+=======
+    background-position: -10px -147px;
+>>>>>>> origin/master
 }
 
 .sprite-hit {
     width: 61px;
     height: 61px;
+<<<<<<< HEAD
     background-position: -10px -214px;
 }
 
@@ -706,11 +1123,21 @@ footer a{
     width: 32px;
     height: 32px;
     background-position: -10px -295px;
+=======
+    background-position: -10px -180px;
+}
+
+.sprite-insta {
+    width: 38px;
+    height: 38px;
+    background-position: -10px -261px;
+>>>>>>> origin/master
 }
 
 .sprite-left {
     width: 9px;
     height: 14px;
+<<<<<<< HEAD
     background-position: -10px -347px;
 }
 
@@ -718,17 +1145,25 @@ footer a{
     width: 21px;
     height: 19px;
     background-position: -10px -381px;
+=======
+    background-position: -10px -319px;
+>>>>>>> origin/master
 }
 
 .sprite-logo-academy {
     width: 108px;
     height: 38px;
+<<<<<<< HEAD
     background-position: -10px -420px;
+=======
+    background-position: -10px -353px;
+>>>>>>> origin/master
 }
 
 .sprite-magnifier {
     width: 17px;
     height: 17px;
+<<<<<<< HEAD
     background-position: -10px -478px;
 }
 
@@ -808,11 +1243,15 @@ footer a{
     width: 157px;
     height: 40px;
     background-position: -10px -1325px;
+=======
+    background-position: -10px -411px;
+>>>>>>> origin/master
 }
 
 .sprite-right {
     width: 9px;
     height: 14px;
+<<<<<<< HEAD
     background-position: -10px -1385px;
 }
 
@@ -828,34 +1267,68 @@ footer a{
     background-position: -10px -1471px;
     border: 4px solid rgba(255,255,255, .8);
     border-radius: 50%;
+=======
+    background-position: -10px -448px;
+}
+
+.sprite-tw {
+    width: 39px;
+    height: 38px;
+    background-position: -10px -482px;
+}
+
+.sprite-vk {
+    width: 38px;
+    height: 38px;
+    background-position: -10px -540px;
+>>>>>>> origin/master
 }
 
 .sprite-waffle-cow {
     width: 48px;
     height: 49px;
+<<<<<<< HEAD
     background-position: -10px -1523px;
+=======
+    background-position: -10px -598px;
+>>>>>>> origin/master
 }
 
 .sprite-waffle-ice-cream {
     width: 49px;
     height: 49px;
+<<<<<<< HEAD
     background-position: -10px -1592px;
+=======
+    background-position: -10px -667px;
+>>>>>>> origin/master
 }
 
 .sprite-waffle-leaf {
     width: 49px;
     height: 49px;
+<<<<<<< HEAD
     background-position: -10px -1661px;
+=======
+    background-position: -10px -736px;
+>>>>>>> origin/master
 }
 
 .sprite-waffle-thermometer {
     width: 48px;
     height: 49px;
+<<<<<<< HEAD
     background-position: -10px -1730px;
 }
 
 
 .social-btn::before, .logo-academy::before, .magnifier::before, .login::before, .cart::before, .left::before, .right::before, .waffle-ice-cream::before, .waffle-cow::before, .waffle-thermometer::before, .waffle-leaf::before, .img-good::before{
+=======
+    background-position: -10px -805px;
+}
+
+.social-btn::before, .logo-academy::before, .magnifier::before, .login::before, .cart::before, .left::before, .right::before{
+>>>>>>> origin/master
     content:'';
     position:absolute;
     top:50%;
@@ -864,6 +1337,7 @@ footer a{
     background-image: url("../img/spritesheet.png");
     background-repeat:no-repeat;
 }
+<<<<<<< HEAD
 .price1::after, .price2::after, .price3::after, .price4::after, .price5::after, .price6::after, .price7::after, .price8::after, .price9::after, .price10::after, .price11::after, .price12::after{
     content:'';
     position:absolute;
@@ -1029,10 +1503,41 @@ footer a{
     width: 21px;
     height: 20px;
     background-position: -10px -50px;
+=======
+.left::before{
+    left:-5px;
+}
+.right::before{
+    right:1000px;
+}
+.left::before{
+    width: 9px;
+    height: 14px;
+    background-position: -10px -319px;
+}
+.right::before{
+    width: 9px;
+    height: 14px;
+    background-position: -10px -448px;
+}
+.login::before, .cart::before{
+    left:25%;
+}
+.login::before{
+    width: 21px;
+    height: 19px;
+    background-position: -10px -50px;
+}
+.cart::before{
+    width: 21px;
+    height: 20px;
+    background-position: -10px -10px;
+>>>>>>> origin/master
 }
 .magnifier::before{
     width: 17px;
     height: 17px;
+<<<<<<< HEAD
     background-position: -10px -478px;
 }
 .social-btn-fb::before{
@@ -1066,10 +1571,34 @@ border-radius: 50%;
 .social-btn::before:hover{
     opacity:1;
     border:4px solid (255, 255, 255, .7)
+=======
+    background-position: -10px -411px;
+}
+.social-btn-fb::before{
+    width: 38px;
+    height: 38px;
+    background-position: -10px -89px;
+}
+.social-btn-vk::before{
+    width: 38px;
+    height: 38px;
+    background-position: -10px -540px;
+}
+.social-btn-inst::before{
+    width: 38px;
+    height: 38px;
+    background-position: -10px -261px;
+}
+.social-btn-tw::before{
+    width: 39px;
+    height: 38px;
+    background-position: -10px -482px;
+>>>>>>> origin/master
 }
 .logo-academy::before{
     width: 108px;
     height: 38px;
+<<<<<<< HEAD
     background-position: -10px -420px;
     left:55px;
     top:0;
@@ -1083,3 +1612,18 @@ border-radius: 50%;
     width: 100%;
     height: 1350px;
 }
+=======
+    background-position: -10px -353px;
+}
+/*Glyphter*/
+.about-us .icon{
+    font-family: 'my font';
+    font-size:11.81px;
+    color:white;
+}
+@font-face {
+    font-family: 'my font';
+    src: url('../fonts/my-font.woff') format('woff');
+}
+    
+>>>>>>> origin/master
