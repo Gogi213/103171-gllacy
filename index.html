@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <link href="css/normalize.css" rel="stylesheet">
       <link href="css/style.css" rel="stylesheet">
-      <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
       <title>Gllacy</title>
     </head>
     <body>
@@ -17,17 +17,78 @@
             <div class="container">
             <img class="logo" src="img/gllacyshop-logo.svg" width="153" height="63" alt="Gllacyshop">
             <nav class="main-navigation">
-                <ul>
-                    <li><a class="catalog" href="catalog.html">Каталог</a></li>
-                    <li><a href="#">Доставка и оплата</a></li>
-                    <li><a href="#">О Компании</a></li>
+                <ul class=top>
+                    <li class="drop"><a class="catalog w-btn" href="catalog.html">Каталог</a>
+                        <ul class="dropdown-catalog">
+                            <li class="pre-helper">
+                                <div clss="helper">
+                                    <ul class="list">
+                                      <li><span class="span-catalog">Новинки</span></li>
+                                      <li><a href="#">Сливочное</a></li>
+                                      <li><a href="#">Щербет</a></li>
+                                      <li><a href="#">Фруктовый лёд</a></li>
+                                      <li><a href="#">Мелорин</a></li>
+                                    </ul> 
+                                  </div>
+                            </li>
+                          </ul>
+                    </li>
+                    <li><a class="w-btn" href="#">Доставка и оплата</a></li>
+                    <li><a class="w-btn" href="#">О Компании</a></li>
                 </ul>
             </nav>
             <div class="user-block">
                 <div class="right-top">
-                    <a class="magnifier" href="#"></a>
-                    <a class="login" href="#">Вход</a>
-                    <a class="cart" href="#">Пусто</a>
+                   <ul>
+                        <li class="drop"><a class="magnifier" href="#"></a>
+                            <ul class="dropdown pos-magnifier">
+                              <li class="pre-helper"><div class="helper"><input type="search" placeholder="Что ищем?"></div></li>
+                            </ul>
+                        </li>
+                    </ul>       
+                    <ul>
+                        <li class="drop"><a class="login" href="#">Вход</a>
+                            <ul class="dropdown pos-login">
+                              <li class="pre-helper"><div class="helper">
+                                  <form>
+                                      <input type="mail" placeholder="Электронная почта">
+                                      <input type="password" placeholder="Пароль">
+                                      <input class="btn" type="submit" value="Войти">
+                                  </form>
+                                  <a href="#">Забыли пароль?</a>
+                                  <a href="#">Новая регистрация</a>
+                              </div></li>
+                            </ul>
+                        </li>
+                    </ul>       
+                    <ul>
+                        <li class="drop"><a class="cart" href="#">Корзина</a>
+                            <ul class="dropdown pos-cart">
+                              <li class="pre-helper-cart">
+                                  <div class="drop-cart">
+                                        <table>
+                                            <tr>
+                                                <td><span class="x"></span></td>
+                                                <td><img src="img/ice-cream-1.png" alt="Мини мороженое" width="33" height="33"></td>
+                                                <td>Пломбир с апельсиновым джемом</td>
+                                                <td>1.5кг х 200р.</td>
+                                                <td>300 руб.</td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="x"></span></td>
+                                                <td><img src="img/ice-cream-3.png" alt="Мини мороженое" width="33" height="33"></td>
+                                                <td>Клубничный пломбир с присыпкой из белого щоколада</td>
+                                                <td>1.5кг х 200р.</td>
+                                                <td>450 руб.</td>
+                                            </tr>
+                                        </table>
+                                        <span>Игото 750 рублей</span>
+                                        <a class="btn" href="#">Оформить заказ</a>
+                                      </div>
+                              </li>
+                            </ul>
+                        </li>
+                    </ul>       
                 </div>
                 <div class="right-bottom">
                     <span class="time">С 10 до 20, ежедневно</span><br>
@@ -68,19 +129,21 @@
                 <h2>Шоколадки даром</h2>
                 <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку<br>
                   вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-                  <a class="promo-btn btn" href="#">Хочу Шоколадки!</a> 
+                  <a class="promo-btn1 btn" href="#">Хочу Шоколадки!</a> 
               </section>
               <div class="promo-ice-cream">
                <div class="block">
                 <article class="ice-cream">
-                  <div class="img-good price1">
+                  <div class="img-good hit">
+                  <span class="price">310<span class="icon">A</span><span class="prefix">/кг</span></span>
                   <img src="img/ice-cream-1.png" width="267" height="267" alt="сливочное с апельсиновым джемом">
                    </div> 
                   <a href="#">Сливочное с апельсиновым<br>
                   джемом и цитрусовой стружкой</a>
                 </article>
                 <article class="ice-cream">
-                  <div class="img-good price2">
+                  <div class="img-good hit">
+                  <span class="price">380<span class="icon">A</span><span class="prefix">/кг</span></span>
                   <img src="img/ice-cream-2.png" width="267" height="267" alt="сливочно-кофейное">
                    </div> 
                   <a href="#">Сливочно-кофейное с кусочками<br>
@@ -89,14 +152,16 @@
                 </div>
                 <div class="block">
                 <article class="ice-cream">
-                  <div class="img-good price3">
+                  <div class="img-good hit">
+                  <span class="price">355<span class="icon">A</span><span class="prefix">/кг</span></span>
                   <img src="img/ice-cream-3.png" width="267" height="267" alt="сливочно-клубничное">
                    </div> 
                   <a href="#">Сливочно-клубничное с<br>
                   присыпкой из белого шоколада</a>
                 </article>
                 <article class="ice-cream">
-                  <div class="img-good price4">
+                  <div class="img-good hit">
+                  <span class="price">415<span class="icon">A</span><span class="prefix">/кг</span></span>
                   <img src="img/ice-cream-4.png" width="267" height="267" alt="сливочное крем-брюле">
                    </div> 
                   <a href="#">Сливочное крем-брюле с<br>
@@ -139,15 +204,17 @@
               <article class="subscribe block">
                   <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе<br>
                     всего самого  вкусного, что у нас происходит. Обещаем не спамить<br>
-                    и не слать всякой ерунды. Честно =)</p>
+                    и не слать всякой ненужной ерунды. Честно =)</p>
                   <form id="subscribe-form" method="post" action="/">
                     <div class="submit-group">
-                      <input type="email" placeholder="Электронная почта" name="email">
-                      <input class="btn" type="submit" value="Отправить" name="submit">
+                      <input type="mail" placeholder="Электронная почта" name="email">
+                      <input class="btn submit-btn" type="submit" value="Отправить" name="submit">
                     </div>
                   </form> 
               </article>
-              <div class="info">
+            </div>
+            <div id="yandex-map" class="map-info">
+                 <div class="info">
                   <span>Адрес главного офиса и<br>
                     онлайн магазина:</span>
                       <b>Ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</b>
@@ -155,11 +222,18 @@
                   <b>8 812 450-25-25</b><br>
                   <span>(с 10 до 20 ежедневно)</span>
                       <a class="info-btn btn" href="#">Форма обратной связи</a>
-                </div>
-            </div>
-            <div class="map-info clearfix">
-
-              </div>   
+                      <div class="feedback">
+                          <span class="x"></span>
+                          <form>
+                             <fieldset>
+                                 <legend>Мы обязательно вам ответим</legend>
+                                  <input type="text" placeholder="Как вас зовут?">
+                                  <input type="mail" placeholder="Ваша почта для ответа?">
+                                  <textarea placeholder="Напишите что-нибудь..."></textarea>
+                              </fieldset>    
+                          </form>
+                      </div>
+                </div></div>   
           </main>
           <footer class="main-footer">
             <div class="container">
@@ -171,11 +245,11 @@
               </section>
               <section class="footer-info">
                 <div class="info-left">
-                    <a href="#"><b>Для поставщиков</b></a><br>
+                    <a href="#"><b>Для поставщиков</b></a>
                   <a href="#">О производстве</a>
                 </div>
                 <div class="info-right">
-                  <a href="#">Наши документы</a><br>
+                  <a href="#">Наши документы</a>
                   <a href="#">Экологические стандарты</a>
                 </div>
               </section>
@@ -184,9 +258,11 @@
                   <p>Сделано в <a href="#">HTML Academy</a> © 2016</p>
               </section>
             </div>
-            
           </footer>
             </div>
-             
+            <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=-jWT4bN8szEnBw2UPNBDCuQ5YhN3o8tz&width=1200&height=429&id=yandex-map">
+        </script>
+        <script type="text/javascript" charset="utf-8" src="script.js">
+                </script>
     </body>
   </html>
