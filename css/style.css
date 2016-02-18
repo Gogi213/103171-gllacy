@@ -3,6 +3,8 @@ body{
     font-size:16px;
     color:white;
     background:#849d8f;
+    box-sizing:border-box;
+    position:relative;
 }
 h1{
     font-size:35px;
@@ -25,15 +27,26 @@ a{color:white;}
     color:#333333;
     border-radius:5px;
     box-sizing:border-box;
-    padding:15px;
-    
+    padding:15px; 
+    position:relative;
 }
-.drop-cart span{
-    display:inline-block;
+.drop-cart a{
+    position:absolute;
+    bottom: 17px;
+right: 16px;
+    font-size:15px;
+    line-height:24.3px;
+    padding: 5px 17px 10px 21px;
+}
+.price-table{
     font-weight:bold;
+    position:absolute;
+    bottom: 70px;
+right: 27px;
+    font-size:15px;
 }
 table{
-    font-size:13px;
+    font-size:12px;
     position:relative;
 }
 table::before{
@@ -42,17 +55,39 @@ table::before{
     height:1px;
     background:#cacac7;
     position:absolute;
-    bottom:0;
-    left:0;
+   bottom: -7px;
+left: -1px;
+}
+td{
+    padding: 8px 11px 10px 3px;
+        font-size:13px;
+}
+td:nth-child(4), td:nth-child(5){
+    padding:10px 10px;
+    white-space:nowrap;
+}
+td:nth-child(3){
+    width: 226px;
+}
+td:nth-child(4){
+    width: 104px;
+}
+tr:last-child td:nth-child(3){
+    padding-top: 17px;
+}
+td span{
+    color:#888888;
 }
 .magnifier{
     float:left;
-  background:rgba(255,255,255, .2);
   width:33px;
   height:33px;
   border-radius:50%;
   margin-right:10px;
-    background: url("../img/magnifier.svg") no-repeat 50% 50%;
+    background: rgba(255,255,255, .2) url("../img/magnifier.svg") no-repeat 50% 50%;
+    z-index:9999;
+    position:relative;
+    font-size:14px;
 }
 .magnifier:hover{
      color:black;
@@ -91,22 +126,36 @@ table::before{
     top:7px;
     right:52px;
 }
+.pos-login a{
+    color:black;
+    font-size:13px;
+    line-height:24.3px;
+}
+.pos-login .helper{
+    height:146px;
+}
+.pos-login input{
+    margin-top: 4px;
+float: left;
+margin-right: 21px;
+}
+.pos-login input[type="password"]{
+    margin-bottom: 12px;
+}
 .pos-cart{
     top:7px;
     left:-425px;
 }
-input[type="search"], input[type="mail"], input[type="password"]{
+input[type="search"], input[type="mail"], input[type="password"], input[type="text"], textarea{
     box-sizing: border-box;
-    padding: 9px 11px;
+    padding: 10px 11px;
     width:242px;
     color:#999999;
     font-size:15px;
     position:relative;
+    border:2px solid #d3d3d2;
     border-radius:5px;
-}
-input[type="password"]{
-    margin-top:5px;
-    margin-bottom:7px;
+    margin-bottom: 5px;
 }
 .right-top input[type="submit"]{
     border:none;
@@ -303,10 +352,11 @@ transition: background-image 0.5s ease, background-color 0.5s ease;
 .container{
     position:relative;
     min-width:900px;
-    max-width:1149px;
-    padding:0 1.7%;
+    max-width:1200px;
+    padding:0 27.6px;
     margin:0 auto;
     outline:1px solid green;
+    box-sizing:border-box;
 }
 nav{
     display:inline-block;
@@ -341,7 +391,12 @@ nav{
 .w-btn{
     font-weight:bold;
     position:relative;
-    z-index:1000;
+}
+.login-btn{
+    padding: 5px 28px 8px 30px;
+    font-size:15px;
+    line-height:24.3px;
+    margin-top: 13px;
 }
 .logo{
     margin-top:10px;
@@ -353,7 +408,7 @@ nav{
     display:inline-block;
     margin-top:23px;
     position:relative;
-    margin-left:17.4%;
+    float:right;
 }
 .right-bottom{
     position: absolute;
@@ -364,13 +419,6 @@ nav{
     font-size:14px;
     font-weight:bold;
 }
-.user-block a{
-    text-decoration:none;
-    font-size:14px;
-    background-color:rgba(255,255,255, .2);
-    position:relative;
-    z-index:9999;
-}
 .login{
     width:48px;
     height:25px;
@@ -379,7 +427,11 @@ nav{
     padding-left:45px;
     border-radius:20px;
     margin-right:10px;
-    background: url("../img/login.svg") no-repeat 20% 50%;
+    background:rgba(255,255,255, .2) url("../img/login.svg") no-repeat 20% 50%;
+    position:relative;
+    z-index:9999;
+    font-size:14px;
+    text-decoration:none;
 }
 .login:hover{
     color:black;
@@ -392,37 +444,11 @@ nav{
     padding-top:7px;
     padding-left:45px;
     border-radius:20px;
-    background: white url("../img/cart.svg") no-repeat 15% 50%;
-}
-td{
-    padding:10px;
-}
-.feedback{
-    position:absolute;
-    display:none;
-}
-.x{
+    background: rgba(255,255,255, .2) url("../img/cart.svg") no-repeat 15% 50%;
+    z-index:9999;
     position:relative;
-}
-.x::before{
-    content:'';
-    position:absolute;
-    width:25px;
-    height:3px;
-    background:#676766;
-    transform:rotate(45deg);
-    left:10px;
-    top:10px;
-}
-.x::after{
-    content:'';
-    position:absolute;
-    width:25px;
-    height:3px;
-    background:#676766;
-    transform:rotate(-45deg);
-    left:0;
-    top:0;
+    font-size:14px;
+    text-decoration:none;
 }
 .cart:hover{
     color:black;
@@ -485,7 +511,7 @@ section h2{
     box-sizing:border-box
 }
 .block{
-    width:48.7%;
+    width:48.9%;
     border-radius:20px;
     float:left;
     font-size:0;
@@ -539,10 +565,13 @@ section h2{
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 .hid-btn{
-    position:absolute;
-    bottom:20px;
-    left:20px;
-    padding:20px;
+   position: absolute;
+bottom: 21px;
+left: 32px;
+padding: 9px 37px 10px 37px;
+}
+.catalog{
+    z-index:1000;
 }
 .promo-btn{
    position:absolute;
@@ -567,16 +596,26 @@ bottom: 29px;
 }
 .ice-cream{
     position:relative;
-   display:inline-block;
+    float:left;
     vertical-align:top;
     font-size:0;
     width:267px;
     margin-top:40px;
     margin-bottom:35px;
+    margin-right:2.2%;
     z-index:1;
+}
+.promo-ice-cream .ice-cream:last-child{
+    margin-right:0;  
+}
+.content .ice-cream:nth-child(4n){
+    margin-right:0;
 }
 .ice-cream:hover>.hidden{
     display:block;
+}
+.ice-cream:hover> a{
+    text-decoration:none;
 }
 .title-price{
     font-size:45px;
@@ -608,7 +647,7 @@ bottom: 29px;
 .icon{
     font-family: 'my font';
     font-size:30px;
-    font-weight:bold;
+    
 }
 @font-face{
     font-family:"my font";
@@ -691,11 +730,10 @@ bottom: 29px;
 }
 .map-info{
     height:429px;
-    width:1200px;
+    width:100%;
     margin:0 auto;
     background: url("../img/map.jpg") no-repeat;
     background-size:cover;
-    position:relative;
 }
 .info{
     position:absolute;
@@ -708,9 +746,8 @@ bottom: 29px;
     padding-left:25px;
     padding-top:30px;
     text-align:left;
-    right:1.5%;
-    top:50px;
-    z-index:1000;
+    right:3.4%;
+    bottom:-70%;
 }
 .info b{
     font-size: 18px;
@@ -725,9 +762,6 @@ bottom: 29px;
     padding:10px 30px 12px 30px;
     font-size:17px;
 }
-.info-btn:hover+.feedback{
-    display:block;
-}
 nav .span-btn{
     background:#d07058;
     padding: 6px 13px 6px 12px;
@@ -735,10 +769,10 @@ nav .span-btn{
 /*СТРАНИЦА ДВА*/
 .hidden{
     position:absolute;
-    top:-10px;
-    left:-15px;
-    width:290px;
-    height:380px;
+    top: -13px;
+left: -15px;
+width: 297px;
+height: 407px;
     background:rgba(255,255,255, .3);
     border-radius:10px;
     display:none;
@@ -768,16 +802,12 @@ sort-filter p{
     background:rgba(255,255,255, .2);
     border-radius:100px;
 }
-.fat-label label{
-    display:inline-block;
-    padding-right:100px;
-    position:relative;
-}
 .fill{
     width:703px;
     height:37px;
     background:rgba(255,255,255, .2);
     border-radius:100px;
+    font-size:16px;
 }
 /*filter range*/
 .range-controls {
@@ -823,27 +853,7 @@ top: 9px;
 }
 /*range*/
 /*fat*/
-input[type=radio] + label::before {
-    content: "\26AB";
-    border: 1px solid #000;
-    border-radius: 50%;
-    display: inline-block;
-    border: 1px solid white;
-    font-size: 20px;    
-    line-height: 20px;
-    margin: -5px 5px 0 0;
-    height: 20px;
-    width: 20px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 0;    
-    transition: font-size ease .2s;
-}
-input[type=radio]:checked + label::before {
-    font-size: 20px;    
-  line-height:21px;
-}
-input[type=checkbox], input[type=radio] {display: none;}
+
 /*fat*/
 /*fill*/
 input[type=checkbox] + label::before {
@@ -863,6 +873,9 @@ input[type=checkbox] + label::before {
 }
 input[type=checkbox]:checked + label::before {
     color: white;
+}
+input[type=checkbox], input[type=checkbox]{
+    display:none;
 }
 input[type="mail"]:hover, input[type="search"]:hover, input[type="password"]:hover{
     border:2px solid #c7c6c5;
@@ -900,13 +913,6 @@ der:focus{
     background:#ffffff;
     color:#6a6a6a;
 }
-.custom-select:after {
-  content: 'v';
-  position: absolute;
-  right: 15px;
-    top:0;
-  z-index: 1;
-}
 select {
   width: 100%;
   -webkit-appearance: none;
@@ -920,13 +926,18 @@ select {
   cursor: pointer;
   border: none;
 }
+.custom-select img{
+    position:absolute;
+    top: 15px;
+right: 10px;
+}
 .main-filter span{
     display:inline-block;
     margin-bottom: 7px;
 margin-left: 17px;
 }
 .block:nth-child(odd){
-    margin-right:2.5%;
+    margin-right:2.2%;
 }
 .paginator{
     position:absolute;
@@ -957,11 +968,10 @@ margin-left: 17px;
 .btn-filter{
     display:inline-block;
     vertical-align:top;
-    padding: 8px 52px 8px 48px;
+    padding: 12px 50px;
     background:rgba(255,255,255, .2);
     border-radius:100px;
     border:1px solid white;
-    margin-top:26px;
 }
 .btn-filter{
     text-decoration:none;
@@ -1057,9 +1067,10 @@ height: 31px;
     font-size:13px;
 }
 .footer-copyright{
-    display:inline-block;
+    float:right;
     width:194px;
     font-size:12px;
+    margin-top: -25px;
 }
 .logo-academy{
     position:relative;
@@ -1198,4 +1209,51 @@ height: 31px;
 .content{
     width: 100%;
     height: 1350px;
+}
+.overlay{
+    background: rgba(0,0,0, .3);
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    display:none;
+}
+fieldset{
+    border:none;
+    position:relative;
+    width:426px;
+}
+fieldset img{
+    position:absolute;
+    top:0;
+    right:0;
+}
+legend{
+    font-size:24px;
+    line-height:22px;
+    color:#343434
+}
+.feedback{
+    box-sizing:border-box;
+    width:480px;
+    height:445px;
+    background:#f8f7f4;
+    border-radius:20px;
+    z-index:10000000;
+    position:fixed;
+    margin:0 auto;
+    padding:10px;
+}
+.feedback input, textarea{
+    margin-top:25px;
+}
+textarea{
+    width:430px;
+    height:150px;
+}
+.feedback input[type="submit"]{
+    float:right;
+    padding:10px;
+    border:none;
 }
