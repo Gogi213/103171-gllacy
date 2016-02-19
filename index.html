@@ -4,7 +4,7 @@
       <meta charset="utf-8">
       <link href="css/normalize.css" rel="stylesheet">
       <link href="css/style.css" rel="stylesheet">
-      <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
       <title>Gllacy</title>
     </head>
     <body>
@@ -63,7 +63,7 @@
                         </li>
                     </ul>       
                     <ul>
-                        <li class="drop"><a class="cart" href="#">Корзина</a>
+                        <li class="drop"><a class="cart" href="#">Пусто</a>
                             <ul class="dropdown pos-cart">
                               <li class="pre-helper-cart">
                                   <div class="drop-cart">
@@ -72,14 +72,14 @@
                                                 <td><img src="img/x.svg" width="10" height="10" alt="x"></td>
                                                 <td><img src="img/ice-cream-1.png" alt="Мини мороженое" width="33" height="33"></td>
                                                 <td>Пломбир с апельсиновым джемом</td>
-                                                <td>1.5 кг <span>х 200р.</span></td>
+                                                <td>1.5 кг <span>х 200 руб</span></td>
                                                 <td>300 руб.</td>
                                             </tr>
                                             <tr>
                                                 <td>                       <img src="img/x.svg" width="10" height="10" alt="x"></td>
                                                 <td><img src="img/ice-cream-3.png" alt="Мини мороженое" width="33" height="33"></td>
                                                 <td>Клубничный пломбир с присыпкой<br> из белого щоколада</td>
-                                                <td>1.5 кг <span>х 200р.</span></td>
+                                                <td>1.5 кг <span>х 200 руб</span></td>
                                                 <td>450 руб.</td>
                                             </tr>
                                         </table>
@@ -120,6 +120,7 @@
         </div>
         <main>
             <div class="container">
+             <div class="row">
               <section class="promo-left block">
                 <h2>Малинка даром!</h2>
                 <p>При покупке 2 кг любого фруктового мороженого, добавим<br>
@@ -127,11 +128,12 @@
                   <a class="promo-btn btn" href="#">Хочу варенье!</a>
               </section>
               <section class="promo-right block">
-                <h2>Шоколадки даром</h2>
+                <h2>Шоколадки даром!</h2>
                 <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку<br>
                   вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-                  <a class="promo-btn1 btn" href="#">Хочу Шоколадки!</a> 
+                  <a class="promo-btn1 btn" href="#">Хочу шоколадки!</a> 
               </section>
+              </div>
               <div class="promo-ice-cream">
                 <article class="ice-cream">
                   <div class="img-good hit">
@@ -192,6 +194,7 @@
                   вкус.</p>
                 </div>
               </div>
+              <div class="row">
               <article class="blog block">
                 <span>Новое в нашем блоге</span>
                 <a href="#"><h2>10 способов сервировки<br>
@@ -209,21 +212,22 @@
                     </div>
                   </form> 
               </article>
-              <div class="info">
+              </div>
+            </div>
+            <div id="yandex-map" class="map-info clearfix"></div> 
+            <div class="container">
+                <div class="info">
                   <span>Адрес главного офиса и<br>
-                    онлайн магазина:</span>
-                      <b>Ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</b>
+                    офлайн магазина:</span>
+                      <b class="bold-top">ул. Большая Конюшенная<br> 19/8, Санкт-Петербург</b>
                   <span>Для заказов по телефону:</span><br>
-                  <b>8 812 450-25-25</b><br>
+                  <b class="bold-bottom">8 812 450-25-25</b><br>
                   <span>(с 10 до 20 ежедневно)</span>
-                      <a class="info-btn btn" href="#">Форма обратной связи</a>
+                    <a class="info-btn btn" href="#">Форма обратной связи</a>
                 </div>
             </div>
-            <div id="yandex-map" class="map-info clearfix">
-
-              </div>   
           </main>
-          <footer class="main-footerclearfix">
+          <footer class="main-footer">
             <div class="container">
               <section class="footer-social">
                 <a class="social-btn social-btn-tw" href="#"></a>
@@ -246,23 +250,75 @@
                   <p>Сделано в <a href="#">HTML Academy</a> © 2016</p>
               </section>
             </div>
-            
           </footer>
             </div>
-            <div class="overlay">
-               <div class="feedback">
-                   <form>
-                       <fieldset>
-                           <legend>Мы обязательно вам ответим!</legend>
-                           <img src="img/x.svg">                           <input type="text" placeholder="Как вас зовут?">
-                           <input type="mail" placeholder="Ваша почта для ответа?">
-                           <textarea placeholder="Напишите что-нибудь..."></textarea>
-                           <input class="btn" type="submit" value="Отправить">
-                       </fieldset>
-                   </form>
-               </div>
-            </div> 
+             <div class="modal-content">
+      <button class="modal-content-close" type="button" title="Закрыть"></button>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+      <fieldset>
+       <legend>Мы обязательно вам ответим!</legend>
+        <input class="icon-user" type="text" name="login" placeholder="Как вас зовут?">
+        <span class="focus-user">Как вас зовут?</span>
+        <input class="icon-mail" type="mail"  name="mail" placeholder="Ваша почта для ответа?">
+        <span class="focus-mail">Ваша почта для ответа?</span>
+        <textarea class="icon-textarea" name="textarea" placeholder="Напишите что-нибудь..."></textarea>
+        <span class="focus-textarea">Напишите что-нибудь</span>
+        <button class="btn modal-btn" type="submit">Отправить</button>
+         </fieldset>
+      </form>
+           </div>         
             <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=-jWT4bN8szEnBw2UPNBDCuQ5YhN3o8tz&width=100%&height=429&id=yandex-map">
         </script>
+        <script>
+      var link = document.querySelector(".info-btn");
+
+      var popup = document.querySelector(".modal-content");
+      var close = popup.querySelector(".modal-content-close");
+
+      var form = popup.querySelector("form");
+      var login = popup.querySelector("[name=login]");
+      var password = popup.querySelector("[name=password]");
+
+      var storage = localStorage.getItem("login");
+
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.add("modal-content-show");
+
+        if (storage) {
+          login.value = storage;
+          password.focus();
+        } else {
+          login.focus();
+        }
+
+      });
+
+      close.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("modal-content-show");
+        popup.classList.remove("modal-error");
+      });
+
+      form.addEventListener("submit", function(event) {
+        if (!login.value || !password.value) {
+          event.preventDefault();
+          popup.classList.remove("modal-error");
+          popup.offsetWidth = popup.offsetWidth;
+          popup.classList.add("modal-error");
+        } else {
+          localStorage.setItem("login", login.value);
+        }
+      });
+
+      window.addEventListener("keydown", function(event) {
+        if (event.keyCode === 27) {
+          if (popup.classList.contains("modal-content-show")) {
+            popup.classList.remove("modal-content-show");
+            popup.classList.remove("modal-error");
+          }
+        }
+      });
+    </script>
     </body>
   </html>
