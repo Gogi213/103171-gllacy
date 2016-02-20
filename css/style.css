@@ -17,6 +17,17 @@ h2{
     display:table;
     clear:both;
 }
+.overlay{
+    width:100%;
+    height:100%;
+    position:fixed;
+    background:rgba(0,0,0, .3);
+    display:none;
+    z-index:1000;
+}
+.show{
+    display:block;
+}
 .backlight{
     width:100%;
     height:30%
@@ -1055,7 +1066,7 @@ input[type="email"]:focus, input[type="search"]:focus, input[type="password"]:fo
     color:#8fbdec;
     left:40px;
     top:48px;
-    font-size:10px;
+    font-size:11px;
     display:none;
 }
 .focus-mail{
@@ -1063,7 +1074,7 @@ input[type="email"]:focus, input[type="search"]:focus, input[type="password"]:fo
     color:#8fbdec;
     left:40px;
     top:114px;
-    font-size:10px;
+    font-size:11px;
     display:none;
 }
 .focus-textarea{
@@ -1071,7 +1082,7 @@ input[type="email"]:focus, input[type="search"]:focus, input[type="password"]:fo
     color:#8fbdec;
     left:40px;
     top:178px;
-    font-size:10px;
+    font-size:11px;
     display:none;
 }
 /*Focus*/
@@ -1260,12 +1271,12 @@ height: 31px;
     float:right;
     width:191px;
     font-size:12px;
-    margin-top: 16px;
 }
 .logo-academy{
     position:relative;
     width: 108px;
-    height: 38px;
+    height: 16px;
+    display:block;
 }
 /*Sprite*/
 .sprite {
@@ -1403,8 +1414,8 @@ height: 31px;
     width: 108px;
     height: 38px;
     background-position: -10px -420px;
-    left:55px;
-    top:-3px;
+    left: 57px;
+    top: 4px;
 }
 .content{
     width: 100%;
@@ -1414,7 +1425,7 @@ height: 31px;
 /*MODAL*/
 
 .modal-content {
-    position: absolute;
+    position: fixed;
     top: 120px;
     left: 50%;
     background:#f8f7f4;
@@ -1427,6 +1438,7 @@ height: 31px;
     color:#343434;
     background: #f8f7f4;
     box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+    z-index:2000;
 }
 .modal-content-show {
     display: block;

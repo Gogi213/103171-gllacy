@@ -8,6 +8,7 @@
       <title>Gllacy</title>
     </head>
     <body>
+       <div class="overlay"></div>
         <input type="radio" id="btn-1" name="toggle" checked>
         <input type="radio" id="btn-2" name="toggle">
         <input type="radio" id="btn-3" name="toggle">
@@ -51,8 +52,8 @@
                             <ul class="dropdown pos-login">
                               <li class="pre-helper"><div class="helper">
                                   <form>
-                                      <input type="email" placeholder="Электронная почта">
-                                      <input type="password" placeholder="Пароль">
+                                      <input type="email" placeholder="Электронная почта" required>
+                                      <input type="password" placeholder="Пароль" required>
                                       <input class="btn login-btn" type="submit" value="Войти">
                                        <a href="#">Забыли пароль?</a>
                                       <a href="#">Новая регистрация</a>
@@ -207,7 +208,7 @@
                     и не слать всякой ненужной ерунды. Честно =)</p>
                   <form id="subscribe-form" method="post" action="/">
                     <div class="submit-group">
-                      <input type="email" placeholder="Электронная почта" name="email">
+                      <input type="email" placeholder="Электронная почта" name="email" required>
                       <input class="btn submit-btn" type="submit" value="Отправить" name="submit">
                     </div>
                   </form> 
@@ -257,11 +258,11 @@
       <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
       <fieldset>
        <legend>Мы обязательно вам ответим!</legend>
-        <input class="icon-user" type="text" name="login" placeholder="Как вас зовут?">
+        <input class="icon-user" type="text" name="login" placeholder="Как вас зовут?" required>
         <span class="focus-user">Как вас зовут?</span>
-        <input class="icon-mail" type="email"  name="mail" placeholder="Ваша почта для ответа?">
+        <input class="icon-mail" type="email"  name="mail" placeholder="Ваша почта для ответа?" required>
         <span class="focus-mail">Ваша почта для ответа?</span>
-        <textarea class="icon-textarea" name="textarea" placeholder="Напишите что-нибудь..."></textarea>
+        <textarea class="icon-textarea" name="textarea" placeholder="Напишите что-нибудь..." required></textarea>
         <span class="focus-textarea">Напишите что-нибудь</span>
         <button class="btn modal-btn" type="submit">Отправить</button>
          </fieldset>

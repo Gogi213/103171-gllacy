@@ -1,6 +1,9 @@
-      var link = document.querySelector(".info-btn");
+       var link = document.querySelector(".info-btn");
 
+      var popup = document.querySelector(".modal-content");
+      var overlay = document.querySelector(".overlay");
       var close = popup.querySelector(".modal-content-close");
+
       var form = popup.querySelector("form");
       var login = popup.querySelector("[name=login]");
       var password = popup.querySelector("[name=password]");
@@ -10,6 +13,7 @@
       link.addEventListener("click", function(event) {
         event.preventDefault();
         popup.classList.add("modal-content-show");
+        overlay.classList.add("show");
 
         if (storage) {
           login.value = storage;
@@ -24,6 +28,14 @@
         event.preventDefault();
         popup.classList.remove("modal-content-show");
         popup.classList.remove("modal-error");
+          overlay.classList.remove("show");
+      });
+
+      overlay.addEventListener("click", function(event) {
+        event.preventDefault();
+        popup.classList.remove("modal-content-show");
+        popup.classList.remove("modal-error");
+        overlay.classList.remove("show");
       });
 
       form.addEventListener("submit", function(event) {
