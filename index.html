@@ -3,11 +3,12 @@
     <head>
       <meta charset="utf-8">
       <link href="css/normalize.css" rel="stylesheet">
-      <link href="css/style.css" rel="stylesheet">
+      <link href=".min.css/.min.css" rel="stylesheet">
       <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
       <title>Gllacy</title>
     </head>
     <body>
+       <div class="overlay"></div>
         <input type="radio" id="btn-1" name="toggle" checked>
         <input type="radio" id="btn-2" name="toggle">
         <input type="radio" id="btn-3" name="toggle">
@@ -169,7 +170,7 @@
                 </article>
               </div>
               <div class="about-us clearfix">
-                <h2>Магазин Глэйси - это онлайн и офлайн магазин по продаже мороженого собственного<br>
+                <h2>Магазин Глэйси &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="dash"></span> это онлайн и офлайн магазин по продаже мороженого собственного<br>
                   производства на развес</h2>
                 <div class="facts waffle-ice-cream">
                   <p>Все наше мороженое изготавливается на собственном<br>
@@ -272,6 +273,7 @@
         <script>
       var link = document.querySelector(".info-btn");
 
+      
       var popup = document.querySelector(".modal-content");
       var close = popup.querySelector(".modal-content-close");
 
