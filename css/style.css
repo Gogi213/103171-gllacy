@@ -181,6 +181,9 @@ input[type="email"], input[type="password"], input[type="text"], textarea{
     border-radius:5px;
     margin-bottom: 5px;
 }
+input, textarea{
+    outline:none;
+}
 input[type="search"]{
     box-sizing: border-box;
     padding: 9px 9px;
@@ -189,7 +192,7 @@ input[type="search"]{
     font-size:15px;
     position:relative;
     border:2px solid #d3d3d2;
-    border-radius:7px;
+    border-radius:5px;
     margin-bottom: 1px;
 }
 .right-top input[type="submit"]{
@@ -203,7 +206,9 @@ footer a:active{
 }
 .dropdown a:active{
     cursor:pointer;
-    background:#f6b5a5;
+}
+.dropdown a:hover{
+        color: #ffbc9e;
 }
 .helper{
     background:#f8f7f4;
@@ -720,7 +725,7 @@ section h2{
 .icon{
     font-family: 'my font';
     font-size:30px;
-    
+    font-weight:normal;
 }
 @font-face{
     font-family:"my font";
@@ -883,7 +888,7 @@ nav .span-btn{
     padding: 6px 13px 6px 12px;
 }
 /*СТРАНИЦА ДВА*/
-.content .ice-cream::after{
+.ice-cream::after{
     content:'';
     position:absolute;
     top: -13px;
