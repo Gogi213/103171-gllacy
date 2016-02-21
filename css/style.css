@@ -3,7 +3,6 @@ body{
     font-size:16px;
     color:white;
     background:#849d8f;
-    box-sizing:border-box;
     position:relative;
 }
 h1{
@@ -29,8 +28,8 @@ h2{
     display:block;
 }
 .backlight{
-    width:100%;
-    height:30%
+    background:#849d8f url("../img/backlight.png") no-repeat;
+    background-size:100% 30%;
 }
 a{
     color:white;
@@ -190,7 +189,7 @@ input[type="search"]{
     font-size:15px;
     position:relative;
     border:2px solid #d3d3d2;
-    border-radius:5px;
+    border-radius:7px;
     margin-bottom: 1px;
 }
 .right-top input[type="submit"]{
@@ -243,7 +242,7 @@ footer a:active{
     box-sizing:border-box;
 }
 .list li{
-    margin-bottom:4px;
+    margin-bottom:3px;
     font-weight:none;
 }
 .list a{
@@ -324,7 +323,7 @@ body > input[type="radio"] {
     display: none;
 }
 .slide-title {
-    width: 700px;
+    width: 788px;
     margin: 0 auto;
     margin-bottom: 30px;
     font-weight: 800;
@@ -535,7 +534,7 @@ section h2{
     margin:0;
 }
 .promo-left{
-    background: url("../img/raspberry.png") no-repeat;
+    background: #d33b62 url("../img/raspberry.png") no-repeat;
     min-height: 229px;
     padding-left: 19px;
     padding-right: 18px;
@@ -547,7 +546,7 @@ section h2{
     box-sizing: border-box;
 }
 .promo-right{
-    background: url("../img/chocolate.png") no-repeat;
+    background: #41271b url("../img/chocolate.png") no-repeat;
     min-height:229px;
     padding-left:20px;
     padding-right:20px;
@@ -565,6 +564,10 @@ section h2{
 }
 .row, .promo-ice-cream, .content{
     font-size:0;
+}
+.row-paginator{
+    text-align:right;
+    
 }
 .promo-right p, .promo-left p{
     font-size:18px;
@@ -742,7 +745,7 @@ section h2{
 .about-us{
     width:100%;
     min-height:306px;
-    background: url("../img/waffle.jpg") repeat;
+    background: #efe3cd url("../img/waffle.jpg") repeat;
     border-radius:18px;
     color:#323232;
     margin-bottom:41px;
@@ -760,6 +763,9 @@ section h2{
     line-height:30px;
     font-size:24px;
 }
+.row-left, .row-right{
+    float:left;
+}
 .facts{
     width:504px;
     float:left;
@@ -770,7 +776,7 @@ section h2{
 }
 .blog{
     min-height:220px;
-    background: url("../img/strawberry.png") no-repeat;
+    background:#ffffff url("../img/strawberry.png") no-repeat;
     color:#5a5a5a;
     margin-bottom:40px;
     padding: 23px 20px 20px 20px;
@@ -778,25 +784,27 @@ section h2{
     vertical-align:top;
     box-sizing: border-box;
 }
-.blog span{
+.blog p{
     font-size:16px;
     color:#5a5a5a;
-    display:block;
     margin:0;
     margin-bottom: -11px;
 }
 .blog a{
     color:#353535;
     font-size:24px;
-    margin-top: -13px;
+    margin-top: 19px;
     display: block;
+    font-weight:bold;
+    
 }
 .subscribe{
     min-height:220px;
-    background: url("../img/mail.png") no-repeat;
+    background: #f8f7f4 url("../img/mail.png") no-repeat;
     color:#5a5a5a;
     padding: 17px 20px 20px 27px;
     box-sizing: border-box;
+    background-size: 100% 100%;
 }
 .subscribe p{
     font-size:16px;
@@ -811,7 +819,7 @@ section h2{
     width:368px;
     height:44px;
     float:left;
-    border-radius:7px;
+    border-radius:5px;
     box-sizing:border-box;
     padding:0 10px;
     margin-right:10px;
@@ -927,7 +935,7 @@ sort-filter p{
 }
 .fat-filter li {
     list-style: none;
-    margin: 9px 0;
+    margin: 9px 4px;
     display:inline-block;
 }
 .fat-filter input {
@@ -938,6 +946,9 @@ sort-filter p{
     margin-right:10px;
   /*отступ от кружочков*/
 } 
+.fat-filter label:last-child{
+    margin-right:0;
+}
 input[type="radio"] + label:before {
     content: '';
     width: 20px;
@@ -967,10 +978,10 @@ input[type="radio"]:checked + label:after {
 /*FATTTTTTTTTTTTTTTT*/
 .fill{
     width:704px;
-    height:37px;
     background:rgba(255,255,255, .2);
     border-radius:100px;
     font-size:16px;
+    padding: 0px 0px 5px 0px;
 }
 /*filter range*/
 .range-controls {
@@ -1045,13 +1056,17 @@ input[type=checkbox]:checked + label::before {
 input[type=checkbox], input[type=checkbox]{
     display:none;
 }
-input[type="email"]:hover, input[type="text"]:hover, textarea:hover, input[type="search"], input[type="password"]:focus{
+input[type="email"]:not(.icon-mail):hover, input[type="search"]:hover, input[type="password"]:hover{
     border:2px solid #c7c6c5;
-    border-radius:4px;
+    border-radius:5px;
 }
-input[type="email"]:focus, input[type="search"]:focus, input[type="password"]:focus, input[type="text"]:focus, textarea:focus{
+.icon-user:hover, .icon-mail:hover, .icon-textarea:hover{
+    border:2px solid #c7c6c5;
+    border-radius:5px;
+}
+.icon-user:focus, .icon-mail:focus, .icon-textarea:focus{
     border:2px solid #8fbdec;
-    border-radius:4px;
+    border-radius:5px;
     color:black;
 }
 
@@ -1136,9 +1151,9 @@ select {
     margin-right:2.2%;
 }
 .paginator{
-    position:absolute;
-    right: 29px;
-    bottom: 23px;
+    display:inline-block;
+    font-size:16px;
+    margin-bottom:22px;
 }
 .paginator a{
     display:inline-block;
@@ -1148,6 +1163,7 @@ select {
     margin-right:1px;
     border-radius:50%;
     padding: 3px 8px 3px 8px;
+    position:relative;
 }
 .paginator a:hover{
     background:rgba(255,255,255, .5)
@@ -1165,7 +1181,7 @@ select {
 .btn-filter{
     display:inline-block;
     vertical-align:top;
-    padding: 6px 26px 8px 26px;
+    padding: 6px 26px 7px 26px;
     background:rgba(255,255,255, .2);
     border-radius:100px;
     border:2px solid white;
@@ -1259,11 +1275,13 @@ height: 31px;
 .info-left{
     width:140px;
     display:inline-block;
+    vertical-align: top;
     font-size:13px;
     position:relative;
 }
 .info-right{
     display:inline-block;
+    vertical-align: top
     width:170px;
     font-size:13px;
 }
@@ -1275,7 +1293,7 @@ height: 31px;
 .logo-academy{
     position:relative;
     width: 108px;
-    height: 16px;
+    height: 35px;
     display:block;
 }
 /*Sprite*/
@@ -1404,22 +1422,27 @@ height: 31px;
     background-position: -10px -347px;
     opacity:.2;
 }
+.left{
+    position:relative;
+}
 .right::before{
      width: 9px;
     height: 14px;
     background-position: -10px -1385px;
     left:97%;
+    top:0;
 }
 .logo-academy::before{
     width: 108px;
     height: 38px;
     background-position: -10px -420px;
-    left: 57px;
-    top: 4px;
+    left: 58px;
+    top: 20px;
 }
 .content{
     width: 100%;
-    height: 1215px;
+    position: relative;
+    margin-bottom:79px;
 }
 
 /*MODAL*/
@@ -1496,7 +1519,7 @@ fieldset{
     border:none;
 }
 .modal-content textarea{
-    border:1px solid #d3d3d2;
+    border:2px solid #d3d3d2;
     max-width:423px;
     max-height:152px;
     border-radius:4px;
