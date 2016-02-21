@@ -1286,7 +1286,7 @@ height: 31px;
 }
 .info-right{
     display:inline-block;
-    vertical-align: top
+    vertical-align: top;
     width:170px;
     font-size:13px;
 }
@@ -1298,7 +1298,7 @@ height: 31px;
 .logo-academy{
     position:relative;
     width: 108px;
-    height: 35px;
+    height: 17px;
     display:block;
 }
 /*Sprite*/
@@ -1442,7 +1442,7 @@ height: 31px;
     height: 38px;
     background-position: -10px -420px;
     left: 58px;
-    top: 20px;
+    top: 3px;
 }
 .content{
     width: 100%;
