@@ -45,7 +45,7 @@
                             <ul class="dropdown pos-magnifier">
                               <li class="pre-helper">
                                   <div class="helper">
-                                      <form>
+                                      <form action="#" method="get">
                                           <input type="search" placeholder="Что ищем?">
                                       </form>
                                   </div>
@@ -57,7 +57,7 @@
                         <li class="drop"><a class="login" href="#">Вход</a>
                             <ul class="dropdown pos-login">
                               <li class="pre-helper"><div class="helper">
-                                  <form>
+                                  <form action="#" method="get">
                                       <input type="email" placeholder="Электронная почта" required>
                                       <input type="password" placeholder="Пароль" required>
                                       <input class="btn login-btn" type="submit" value="Войти">
@@ -215,7 +215,7 @@
                   <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе<br>
                     всего самого  вкусного, что у нас происходит. Обещаем не спамить<br>
                     и не слать всякой ненужной ерунды. Честно =)</p>
-                  <form id="subscribe-form" method="post" action="/">
+                  <form id="subscribe-form" method="get" action="#">
                     <div class="submit-group">
                       <input type="email" placeholder="Электронная почта" name="email" required>
                       <input class="btn submit-btn" type="submit" value="Отправить" name="submit">
@@ -264,7 +264,7 @@
             </div>
              <div class="modal-content">
       <button class="modal-content-close" type="button" title="Закрыть"></button>
-      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="login-form" action="#" method="post">
       <fieldset>
        <legend>Мы обязательно вам ответим!</legend>
         <input class="icon-user" type="text" name="login" placeholder="Как вас зовут?" required>
