@@ -677,10 +677,7 @@ section h2{
     margin-bottom:35px;
     margin-right:2.2%;
 }
-.promo-ice-cream .ice-cream:last-child{
-    margin-right:0;  
-}
-.content .ice-cream:nth-child(4n){
+.ice-cream:nth-child(4n){
     margin-right:0;
 }
 .ice-cream:hover.ice-cream::after{
@@ -793,13 +790,11 @@ section h2{
     font-size:16px;
     color:#5a5a5a;
     margin:0;
-    margin-bottom: -11px;
+    margin-bottom: 5px;
 }
 .blog a{
     color:#353535;
     font-size:24px;
-    margin-top: 19px;
-    display: block;
     font-weight:bold;
     
 }
